@@ -9,4 +9,14 @@ public record VeiculoFinalizado(@JsonAlias ("Valor") String valor,
                                 @JsonAlias ("Modelo") String modelo,
                                 @JsonAlias ("MesReferencia") String mesReferencia,
                                 @JsonAlias ("CodigoFipe") String codigoFipe) {
+    @Override
+    public String toString() {
+        return "O seu veículo: [" +
+                "Preço na Tabela: '" + valor + '\'' +
+                ", Marca: '" + marca + '\'' +
+                ", Modelo: '" + modelo + '\'' +
+                ", Mês de Referência: '" + mesReferencia + '\'' +
+                ", Código na Tabela Fipe: '" + codigoFipe + '\'' +
+                ']';
+    }
 }
